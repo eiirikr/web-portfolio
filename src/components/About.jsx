@@ -18,9 +18,9 @@ const About = () => {
               engaging, user-friendly web experiences.
             </p>
             <div className="about-btn">
-              <button className="btn">
+              <a href="src\assets\Jeric Javier.pdf" className="btn">
                 Download CV <i className="uil uil-import"></i>
-              </button>
+              </a>
             </div>
           </div>
         </div>

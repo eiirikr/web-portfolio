@@ -20,9 +20,9 @@ const Hero = () => {
         </div>
         <div className="featured-text-btn">
           <button className="btn blue-btn">Hire Me</button>
-          <button className="btn">
+          <a href="src\assets\Jeric Javier.pdf" className="btn">
             Download CV <i className="uil uil-file-alt"></i>
-          </button>
+          </a>
         </div>
         <div className="social_icons">
           {SOCIAL_LINKS.map((link, index) => (
