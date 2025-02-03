@@ -19,7 +19,9 @@ const Hero = () => {
           </p>
         </div>
         <div className="featured-text-btn">
-          <button className="btn blue-btn">Hire Me</button>
+          <a href="mailto:javierjericm@gmail.com" className="btn blue-btn">
+            Hire Me
+          </a>
           <a href="src\assets\Jeric Javier.pdf" className="btn">
             Download CV <i className="uil uil-file-alt"></i>
           </a>
