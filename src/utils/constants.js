@@ -22,7 +22,32 @@ export const SOCIAL_LINKS = [
 ];
 
 export const SKILLS = {
-  frontend: ["HTML", "CSS", "JavaScript", "Bootstrap", "React"],
-  backend: ["PHP", "Java", "Python", "C++"],
-  database: ["MySQL"],
+  frontend: [
+    "HTML5",
+    "CSS3",
+    "Bootstrap",
+    "Wireframes and Mockups",
+    "Figma",
+    "Git and Github",
+    "jQuery",
+    "AJAX",
+  ],
+  backend: [
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Postman",
+    "REST API",
+    "PHP",
+    "MySQL",
+    "XAMPP",
+  ],
+  fullstack: [
+    "React.js",
+    "JS DOM Manipulation",
+    "API Integration with Fetch",
+    "SDLC",
+    "Trello",
+  ],
 };

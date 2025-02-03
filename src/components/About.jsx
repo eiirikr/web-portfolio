@@ -47,10 +47,10 @@ const About = () => {
           </div>
           <div className="skills-box">
             <div className="skills-header">
-              <h3>Database</h3>
+              <h3>Fullstack</h3>
             </div>
             <div className="skills-list">
-              {SKILLS.database.map((skill, index) => (
+              {SKILLS.fullstack.map((skill, index) => (
                 <span key={index}>{skill}</span>
               ))}
             </div>
