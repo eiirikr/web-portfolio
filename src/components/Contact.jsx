@@ -14,15 +14,40 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
-    // Add API call or email service integration here
+    const { name, email, message } = formData;
+
+    if (name && email && message) {
+      const emailBody = `
+      Hello Jeric,
+
+      I hope you're doing well.
+
+      You have received a new message from the contact form on your portfolio website. Below are the details:
+
+      Name: ${name}
+      Email: ${email}
+
+      Message:
+      ${message}
+
+      Best regards,
+      ${name}
+      `;
+
+      const mailtoLink = `mailto:javierjericm@gmail.com?subject=Contact from ${name}&body=${encodeURIComponent(
+        emailBody
+      )}`;
+      window.location.href = mailtoLink;
+    } else {
+      alert("Please fill in all fields.");
+    }
   };
 
   return (
     <section className="section" id="contact">
       <div className="top-header">
         <h1>Get in touch</h1>
-        <span>Do you have a project in your mind, contact me here</span>
+        <span>Do you have a project in your mind? Contact me here.</span>
       </div>
       <div className="row">
         <div className="col">
@@ -71,7 +96,7 @@ const Contact = () => {
                 ></textarea>
               </div>
               <div className="form-button">
-                <button type="submit" className="btn">
+                <button type="submit" className="btn" id="send-button">
                   Send <i className="uil uil-message"></i>
                 </button>
               </div>
