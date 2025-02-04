@@ -18,8 +18,12 @@ const About = () => {
               engaging, user-friendly web experiences.
             </p>
             <div className="about-btn">
-              <a href="src\assets\Jeric Javier.pdf" className="btn">
-                Download CV <i className="uil uil-import"></i>
+              <a
+                href="Jeric Javier.pdf"
+                download="Jeric Javier.pdf"
+                class="btn"
+              >
+                Download CV <i class="uil uil-import"></i>
               </a>
             </div>
           </div>

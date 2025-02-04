@@ -22,8 +22,8 @@ const Hero = () => {
           <a href="mailto:javierjericm@gmail.com" className="btn blue-btn">
             Hire Me
           </a>
-          <a href="src\assets\Jeric Javier.pdf" className="btn">
-            Download CV <i className="uil uil-file-alt"></i>
+          <a href="Jeric Javier.pdf" download="Jeric Javier.pdf" class="btn">
+            Download CV <i class="uil uil-file-alt"></i>
           </a>
         </div>
         <div className="social_icons">

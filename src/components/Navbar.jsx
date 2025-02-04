@@ -60,6 +60,11 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+      <div class="nav-button">
+        <a href="Jeric Javier.pdf" download="Jeric Javier.pdf" class="btn">
+          Download CV <i class="uil uil-file-alt"></i>
+        </a>
+      </div>
       <div className="nav-menu-btn" onClick={toggleMenu}>
         <i className="uil uil-bars"></i>
       </div>
