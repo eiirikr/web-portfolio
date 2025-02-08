@@ -2,6 +2,15 @@ import React from "react";
 import { SOCIAL_LINKS } from "../utils/constants";
 
 const Hero = () => {
+  function typingEffect() {
+    new Typed(".typedText", {
+      strings: ["Software Engineer", "Web Developer", "Full stack Developer"],
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 80,
+      backDelay: 2000,
+    });
+  }
   return (
     <section className="featured-box" id="home">
       <div className="featured-text">
@@ -10,7 +19,7 @@ const Hero = () => {
         </div>
         <div className="featured-name">
           <p>I want to be a </p>
-          <span className="typedText"></span>
+          <span className="typedText">{() => typingEffect()}</span>
         </div>
         <div className="featured-text-info">
           <p>
