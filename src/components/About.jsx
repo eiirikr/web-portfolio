@@ -21,9 +21,9 @@ const About = () => {
               <a
                 href="Jeric Javier.pdf"
                 download="Jeric Javier.pdf"
-                class="btn"
+                className="btn"
               >
-                Download CV <i class="uil uil-import"></i>
+                Download CV <i className="uil uil-import"></i>
               </a>
             </div>
           </div>
