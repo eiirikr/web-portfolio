@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import Typed from "typed.js";
 import { SOCIAL_LINKS } from "../utils/constants";
 
 const Hero = () => {
-  function typingEffect() {
-    new Typed(".typedText", {
-      strings: ["Software Engineer", "Web Developer", "Full stack Developer"],
+  const typedRef = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(typedRef.current, {
+      strings: ["Software Engineer", "Web Developer", "Full Stack Developer"],
       loop: true,
       typeSpeed: 100,
       backSpeed: 80,
       backDelay: 2000,
     });
-  }
+
+    // Cleanup to prevent memory leaks
+    return () => typed.destroy();
+  }, []);
+
   return (
     <section className="featured-box" id="home">
       <div className="featured-text">
@@ -19,7 +26,7 @@ const Hero = () => {
         </div>
         <div className="featured-name">
           <p>I want to be a </p>
-          <span className="typedText">{() => typingEffect()}</span>
+          <span className="typedText" ref={typedRef}></span>
         </div>
         <div className="featured-text-info">
           <p>
@@ -31,8 +38,12 @@ const Hero = () => {
           <a href="mailto:javierjericm@gmail.com" className="btn blue-btn">
             Hire Me
           </a>
-          <a href="Jeric Javier.pdf" download="Jeric Javier.pdf" class="btn">
-            Download CV <i class="uil uil-file-alt"></i>
+          <a
+            href="Jeric Javier.pdf"
+            download="Jeric Javier.pdf"
+            className="btn"
+          >
+            Download CV <i className="uil uil-file-alt"></i>
           </a>
         </div>
         <div className="social_icons">
@@ -52,7 +63,7 @@ const Hero = () => {
       </div>
       <div className="featured-image">
         <div className="image">
-          <img src="src\assets\avatar.jpg" alt="avatar" loading="lazy" />
+          <img src="src/assets/avatar.jpg" alt="avatar" loading="lazy" />
         </div>
       </div>
       <div className="scroll-icon-box">
