@@ -1,10 +1,9 @@
-import React from "react";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 // import "./App.css";
 
-const App = () => {
+export default function App() {
   return (
     <>
       <Navbar />
@@ -12,6 +11,4 @@ const App = () => {
       <Footer />
     </>
   );
-};
-
-export default App;
+}

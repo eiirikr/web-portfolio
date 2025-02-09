@@ -4,7 +4,7 @@ import About from "../components/About";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 
-const Home = () => {
+export default function Home() {
   return (
     <main className="wrapper">
       <Hero />
@@ -13,6 +13,4 @@ const Home = () => {
       <Contact />
     </main>
   );
-};
-
-export default Home;
+}

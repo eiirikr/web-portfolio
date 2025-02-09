@@ -1,7 +1,6 @@
-import React from "react";
 import { SKILLS } from "../utils/constants";
 
-const About = () => {
+export default function About() {
   return (
     <section className="section" id="about">
       <div className="top-header">
@@ -63,6 +62,4 @@ const About = () => {
       </div>
     </section>
   );
-};
-
-export default About;
+}

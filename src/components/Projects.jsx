@@ -1,6 +1,4 @@
-import React from "react";
-
-const Projects = () => {
+export default function Projects() {
   return (
     <section className="section" id="projects">
       <div className="top-header">
@@ -25,6 +23,4 @@ const Projects = () => {
       </div>
     </section>
   );
-};
-
-export default Projects;
+}

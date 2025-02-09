@@ -1,7 +1,6 @@
-import React from "react";
 import { SOCIAL_LINKS } from "../utils/constants";
 
-const Footer = () => {
+export default function Footer() {
   return (
     <footer>
       <div className="top-footer">
@@ -48,6 +47,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

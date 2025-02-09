@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import { SOCIAL_LINKS } from "../utils/constants";
 
-const Hero = () => {
+export default function Hero() {
   const typedRef = useRef(null);
 
   useEffect(() => {
@@ -74,6 +74,4 @@ const Hero = () => {
       </div>
     </section>
   );
-};
-
-export default Hero;
+}
