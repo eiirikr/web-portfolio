@@ -1,15 +1,35 @@
-import React, { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
 
-const Navbar = () => {
+export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const shadowedRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (shadowedRef.current) {
+        if (window.scrollY > 50) {
+          shadowedRef.current.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
+          shadowedRef.current.style.height = "70px";
+          shadowedRef.current.style.lineHeight = "70px";
+        } else {
+          shadowedRef.current.style.boxShadow = "none";
+          shadowedRef.current.style.height = "90px";
+          shadowedRef.current.style.lineHeight = "90px";
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav id="header">
+    <nav id="header" ref={shadowedRef}>
       <div className="nav-logo">
         <p className="nav-name">Jer</p>
         <span>.</span>
@@ -26,8 +46,8 @@ const Navbar = () => {
                 to={section}
                 smooth={true}
                 duration={500}
-                spy={true} // Makes the active link dynamic
-                offset={-70} // Adjusts for fixed navbar height if needed
+                spy={true}
+                offset={-70}
                 activeClass="active-link"
                 className="nav-link"
               >
@@ -59,6 +79,4 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}
