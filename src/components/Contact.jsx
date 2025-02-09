@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { sr, srLeft, srRight } from "../utils/scrollReveal";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -6,6 +7,12 @@ export default function Contact() {
     email: "",
     message: "",
   });
+
+  useEffect(() => {
+    sr.reveal(".top-header", {});
+    srLeft.reveal(".contact-info", { delay: 100 });
+    srRight.reveal(".form-control", { delay: 100 });
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

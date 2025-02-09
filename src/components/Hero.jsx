@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import { SOCIAL_LINKS } from "../utils/constants";
-
+import { sr } from "../utils/scrollReveal";
 export default function Hero() {
   const typedRef = useRef(null);
 
@@ -13,6 +13,14 @@ export default function Hero() {
       backSpeed: 80,
       backDelay: 2000,
     });
+
+    // Home Section Animations
+    sr.reveal(".featured-text-card", {});
+    sr.reveal(".featured-name", { delay: 100 });
+    sr.reveal(".featured-text-info", { delay: 200 });
+    sr.reveal(".featured-text-btn", { delay: 200 });
+    sr.reveal(".social_icons", { delay: 200 });
+    sr.reveal(".featured-image", { delay: 300 });
 
     // Cleanup to prevent memory leaks
     return () => typed.destroy();

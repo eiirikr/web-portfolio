@@ -1,4 +1,12 @@
+import { useEffect } from "react";
+import { sr } from "../utils/scrollReveal";
+
 export default function Projects() {
+  useEffect(() => {
+    sr.reveal(".project-box", { interval: 200 });
+    sr.reveal(".top-header", {});
+  }, []);
+
   return (
     <section className="section" id="projects">
       <div className="top-header">

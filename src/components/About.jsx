@@ -1,6 +1,19 @@
+import { useEffect } from "react";
 import { SKILLS } from "../utils/constants";
+import { sr, srLeft, srRight } from "../utils/scrollReveal";
 
 export default function About() {
+  useEffect(() => {
+    // Headings Animations
+    sr.reveal(".top-header", {});
+
+    // About & Contact Section Animations (Left)
+    srLeft.reveal(".about-info", { delay: 100 });
+
+    // Skills & Form Animations (Right)
+    srRight.reveal(".skills-box", { delay: 100 });
+  }, []);
+
   return (
     <section className="section" id="about">
       <div className="top-header">
